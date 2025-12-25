@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="description" content="SpyernetOS is a next-gen OS designed for gaming. Immersive experience and high performance. Coming soon!">
+<meta name="robots" content="index, follow">
+<title>SpyernetOS – Coming Soon</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(circle at top, #0a1b2e, #02060d);
+  color: #e8f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOVING NEON LIGHTS */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, #00cfff, #004bff);
+  filter: blur(140px);
+  opacity: 0.7;
+  animation: drift 12s ease-in-out infinite alternate;
+}
+
+body::after {
+  animation-duration: 18s;
+  background: linear-gradient(45deg, #0099ff, #00e5ff);
+}
+
+@keyframes drift {
+  from { transform: translate(-200px, -200px); }
+  to { transform: translate(300px, 200px); }
+}
+
+/* FULLSCREEN CONTAINER */
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GLASS PANEL */
+.panel {
+  width: 100%;
+  max-width: 900px;
+  padding: 70px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(0, 195, 255, 0.35);
+  box-shadow:
+    0 0 60px rgba(0, 200, 255, 0.35),
+    inset 0 0 30px rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+/* TITLE */
+h1 {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, #8feaff, #00cfff, #007bff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonFlow 5s linear infinite;
+}
+
+@keyframes neonFlow {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+/* SUBTITLE */
+h2 {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  color: #aeefff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* DESCRIPTION */
+p {
+  max-width: 700px;
+  margin: auto;
+  font-size: clamp(1rem, 3.8vw, 1.15rem);
+  line-height: 1.8;
+  color: #d9f6ff;
+}
+
+/* ENERGY LINE */
+.energy {
+  margin: 40px auto;
+  height: 6px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #007bff, #00cfff, #007bff);
+  background-size: 200%;
+  animation: energyMove 3s linear infinite;
+  box-shadow: 0 0 25px #00cfff;
+}
+
+@keyframes energyMove {
+  from { background-position: 0%; }
+  to { background-position: 200%; }
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  letter-spacing: 2px;
+  color: #9fe7ff;
+  opacity: 0.9;
+}
+
+/* MOBILE TWEAKS */
+@media (max-width: 600px) {
+  .panel {
+    padding: 40px 25px;
+    border-radius: 22px;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    letter-spacing: 3px;
+  }
+
+  .energy {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<script>
+(function(s){
+  s.dataset.zone='10366440',
+  s.src='https://nap5k.com/tag.min.js'
+})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+</script>
+
+<body>
+
+<div class="container">
+  <div class="panel">
+    <h1>SpyernetOS</h1>
+    <h2>Coming Soon</h2>
+
+    <p>
+      SpyernetOS is a next-generation operating system engineered for gamers.
+      Built to deliver extreme performance, ultra-low latency, and visually
+      immersive experiences, it transforms your hardware into a powerful
+      gaming machine with a sleek, futuristic interface.
+    </p>
+
+    <div class="energy"></div>
+
+    <div class="tagline">
+      POWER • SPEED • PRECISION
+    </div>
+
+    <div style="margin-top: 35px;">
+      <a href="mailto:spyernet@outlook.com"
+         style="color:#00cfff; text-decoration:none; letter-spacing:2px;">
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
