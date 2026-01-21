@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+/>
+<title>SpyernetOS — Terms & Conditions</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100svh;
+  background: radial-gradient(circle at center, #0b0016, #020005);
+  color: #f5edff;
+  overflow-x: hidden;
+}
+
+/* SPACE BACKGROUND */
+.space {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.space-star {
+  position: absolute;
+  width: 1.5px;
+  height: 1.5px;
+  background: #e9d5ff;
+  opacity: 0.5;
+  animation: drift linear infinite;
+}
+
+@keyframes drift {
+  from { transform: translateY(110svh); }
+  to { transform: translateY(-10svh); }
+}
+
+.space::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(168,85,247,0.22),
+    transparent 60%
+  );
+  filter: blur(120px);
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 22px 80px;
+}
+
+/* HEADERS */
+h1 {
+  font-size: clamp(2.2rem, 7vw, 3.2rem);
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ede9fe, #a855f7, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d8b4fe;
+  margin-bottom: 28px;
+}
+
+/* META */
+.meta {
+  font-size: 0.9rem;
+  color: #e9d5ff;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* TEXT */
+.section {
+  margin-bottom: 32px;
+}
+
+.section h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #e9d5ff;
+}
+
+.section p,
+.section li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #f5edff;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 48px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #d8b4fe;
+  text-align: center;
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SPACE BACKGROUND -->
+<div class="space">
+  <div class="space-star" style="left:10%; animation-duration:18s;"></div>
+  <div class="space-star" style="left:25%; animation-duration:22s;"></div>
+  <div class="space-star" style="left:40%; animation-duration:26s;"></div>
+  <div class="space-star" style="left:60%; animation-duration:20s;"></div>
+  <div class="space-star" style="left:75%; animation-duration:24s;"></div>
+  <div class="space-star" style="left:90%; animation-duration:28s;"></div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <h1>Terms and Conditions</h1>
+  <h2>Spyernet™ Operating System</h2>
+
+  <div class="meta">
+    Last Updated: 23 January 2026
+  </div>
+
+  <div class="section">
+    <h3>1. Acceptance of Terms</h3>
+    <p>
+      These Terms and Conditions (“Terms”) govern your use of the Spyernet
+      Operating System (“Spyernet OS” or “Operating System”). By installing,
+      accessing, or using Spyernet OS, you agree to be bound by these Terms.
+      If you do not agree, you must not use the proprietary portions of the
+      Operating System.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>2. Composition of the Operating System</h3>
+    <p>Spyernet OS is composed of multiple software components, including:</p>
+    <ul>
+      <li>Open Source Software licensed under GPL, LGPL, and compatible licenses</li>
+      <li>Proprietary software components developed by the Spyernet Project</li>
+      <li>Third-party proprietary software, including Steam</li>
+    </ul>
+    <p>Each component is governed by its own applicable license.</p>
+  </div>
+
+  <div class="section">
+    <h3>3. Open Source Software Rights</h3>
+    <p>
+      Spyernet OS includes GPL and LGPL licensed software such as the Linux
+      kernel (including Linux Zen), Bash, XFCE4, and GNU utilities.
+    </p>
+    <p>
+      Nothing in these Terms restricts or overrides rights granted under
+      open-source licenses. In the event of conflict, the open-source license
+      shall prevail.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>4. License for Proprietary Components</h3>
+    <p>
+      Spyernet grants you a limited, non-exclusive, non-transferable license
+      to use proprietary components of Spyernet OS, subject to these Terms.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>5. Redistribution Policy</h3>
+    <p>
+      Redistribution of open-source components is permitted according to
+      their licenses. Redistribution of Spyernet proprietary components,
+      including system images and branding, is not permitted without
+      prior written authorization.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>6. Commercial Use and License Fees</h3>
+    <p>
+      Use of Spyernet proprietary components may require payment of a license
+      fee. Current terms are published at https://spyernet.github.io.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>7. Prohibited Conduct</h3>
+    <p>
+      Except where permitted by open-source licenses, users may not reverse
+      engineer proprietary components or circumvent licensing mechanisms.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>8. Third-Party Software</h3>
+    <p>
+      Third-party software included with Spyernet OS is governed by its own
+      licenses. Spyernet does not claim ownership over such software.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>9. Disclaimer of Warranty</h3>
+    <p>
+      Spyernet OS is provided “AS IS,” without warranties of any kind, except
+      as required by applicable open-source licenses.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>10. Contact Information</h3>
+    <p>
+      For licensing inquiries, source code requests, or compliance concerns:<br>
+      Email: spyernet@outlook.com
+    </p>
+  </div>
+
+  <div class="footer">
+    © Spyernet Project — All Rights Reserved
+  </div>
+
+</div>
+
+</body>
+</html>
