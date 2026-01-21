@@ -22,37 +22,54 @@ body {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  background: radial-gradient(circle at top, #0a1b2e, #02060d);
-  color: #e8f9ff;
+  background: radial-gradient(circle at top, #2b003d, #0b0014);
+  color: #f3e8ff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* MOVING NEON LIGHTS */
+/* FLOATING NEON AURAS */
 body::before,
 body::after {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(45deg, #00cfff, #004bff);
-  filter: blur(140px);
-  opacity: 0.7;
-  animation: drift 12s ease-in-out infinite alternate;
+  width: 520px;
+  height: 520px;
+  background: linear-gradient(45deg, #a855f7, #6d28d9);
+  filter: blur(160px);
+  opacity: 0.75;
+  animation: drift 14s ease-in-out infinite alternate;
 }
 
 body::after {
-  animation-duration: 18s;
-  background: linear-gradient(45deg, #0099ff, #00e5ff);
+  animation-duration: 20s;
+  background: linear-gradient(45deg, #c084fc, #7c3aed);
 }
 
 @keyframes drift {
-  from { transform: translate(-200px, -200px); }
-  to { transform: translate(300px, 200px); }
+  from { transform: translate(-250px, -200px); }
+  to { transform: translate(350px, 260px); }
 }
 
-/* FULLSCREEN CONTAINER */
+/* PARTICLES */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #c084fc;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-120px); opacity: 0; }
+}
+
+/* CONTAINER */
 .container {
   position: relative;
   z-index: 2;
@@ -67,25 +84,42 @@ body::after {
 /* GLASS PANEL */
 .panel {
   width: 100%;
-  max-width: 900px;
-  padding: 70px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(0, 195, 255, 0.35);
+  max-width: 920px;
+  padding: 75px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(168, 85, 247, 0.45);
   box-shadow:
-    0 0 60px rgba(0, 200, 255, 0.35),
-    inset 0 0 30px rgba(255, 255, 255, 0.08);
+    0 0 80px rgba(168, 85, 247, 0.45),
+    inset 0 0 35px rgba(255, 255, 255, 0.08);
   text-align: center;
+  position: relative;
+}
+
+/* GLOW RING */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  background: linear-gradient(120deg, transparent, #a855f7, transparent);
+  opacity: 0.7;
+  filter: blur(14px);
+  animation: ring 6s linear infinite;
+}
+
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* TITLE */
 h1 {
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  letter-spacing: 3px;
-  margin-bottom: 18px;
-  background: linear-gradient(90deg, #8feaff, #00cfff, #007bff);
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #e9d5ff, #a855f7, #7c3aed);
   background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -100,32 +134,32 @@ h1 {
 /* SUBTITLE */
 h2 {
   font-size: clamp(1.2rem, 4vw, 1.6rem);
-  color: #aeefff;
-  margin-bottom: 30px;
+  color: #d8b4fe;
+  margin-bottom: 34px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 
 /* DESCRIPTION */
 p {
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
   font-size: clamp(1rem, 3.8vw, 1.15rem);
-  line-height: 1.8;
-  color: #d9f6ff;
+  line-height: 1.9;
+  color: #f3e8ff;
 }
 
-/* ENERGY LINE */
+/* ENERGY BAR */
 .energy {
-  margin: 40px auto;
-  height: 6px;
+  margin: 45px auto;
+  height: 7px;
   width: 80%;
-  max-width: 500px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #007bff, #00cfff, #007bff);
+  max-width: 520px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #7c3aed, #c084fc, #7c3aed);
   background-size: 200%;
   animation: energyMove 3s linear infinite;
-  box-shadow: 0 0 25px #00cfff;
+  box-shadow: 0 0 30px #a855f7;
 }
 
 @keyframes energyMove {
@@ -135,37 +169,47 @@ p {
 
 /* TAGLINE */
 .tagline {
-  font-size: clamp(0.85rem, 3vw, 1rem);
-  letter-spacing: 2px;
-  color: #9fe7ff;
-  opacity: 0.9;
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
+  letter-spacing: 3px;
+  color: #e9d5ff;
+  opacity: 0.95;
 }
 
-/* MOBILE TWEAKS */
+/* CONTACT */
+.contact a {
+  display: inline-block;
+  margin-top: 38px;
+  padding: 14px 36px;
+  border-radius: 40px;
+  color: #f5ebff;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border: 1px solid #a855f7;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  background: #a855f7;
+  box-shadow: 0 0 45px rgba(168, 85, 247, 0.9);
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
   .panel {
-    padding: 40px 25px;
-    border-radius: 22px;
-  }
-
-  h1 {
-    letter-spacing: 2px;
-  }
-
-  h2 {
-    letter-spacing: 3px;
-  }
-
-  .energy {
-    width: 90%;
+    padding: 45px 25px;
   }
 }
 </style>
 </head>
 
-<script src="https://3nbf4.com/act/files/tag.min.js?z=10374844" data-cfasync="false" async></script>
-
 <body>
+
+<!-- Floating particles -->
+<div class="particle" style="left:15%; top:80%; animation-delay:0s;"></div>
+<div class="particle" style="left:35%; top:90%; animation-delay:1s;"></div>
+<div class="particle" style="left:65%; top:85%; animation-delay:2s;"></div>
+<div class="particle" style="left:85%; top:95%; animation-delay:3s;"></div>
 
 <div class="container">
   <div class="panel">
@@ -174,9 +218,9 @@ p {
 
     <p>
       SpyernetOS is a next-generation operating system engineered for gamers.
-      Built to deliver extreme performance, ultra-low latency, and visually
-      immersive experiences, it transforms your hardware into a powerful
-      gaming machine with a sleek, futuristic interface.
+      Designed for extreme performance, ultra-low latency, and deep visual
+      immersion — transforming your hardware into a precision-tuned gaming
+      powerhouse with a futuristic purple-neon interface.
     </p>
 
     <div class="energy"></div>
@@ -185,13 +229,9 @@ p {
       POWER • SPEED • PRECISION
     </div>
 
-    <div style="margin-top: 35px;">
-      <a href="mailto:spyernet@outlook.com"
-         style="color:#00cfff; text-decoration:none; letter-spacing:2px;">
-        Contact Us
-      </a>
+    <div class="contact">
+      <a href="mailto:spyernet@outlook.com">CONTACT US</a>
     </div>
-
   </div>
 </div>
 
